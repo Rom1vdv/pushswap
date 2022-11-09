@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rom1 <rom1@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 13:40:24 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/02/16 14:54:56 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:58:05 by rom1             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew	(void *content)
 {
 	t_list	*lst_new;
 
