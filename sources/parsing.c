@@ -6,11 +6,11 @@
 /*   By: rom1 <rom1@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/09 19:30:38 by rom1             ###   ########.fr       */
+/*   Updated: 2022/11/09 19:34:32 by rom1             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	check_arg_validity(char *arg)
 {
