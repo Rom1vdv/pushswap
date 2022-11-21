@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rom1 <rom1@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:39:27 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/09 19:30:33 by rom1             ###   ########.fr       */
+/*   Updated: 2022/11/21 14:27:21 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # define ERROR 1
+
 # include "parsing.h"
+# include "error.h"
+# include "moves.h"
+# include "../libft/libft.h"
+# include <stdio.h>
 
 #endif

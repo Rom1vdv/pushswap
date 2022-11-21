@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_moves.c                                  :+:      :+:    :+:   */
+/*   error.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 15:17:41 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/17 15:56:17 by romvan-d         ###   ########.fr       */
+/*   Created: 2022/11/16 15:53:42 by romvan-d          #+#    #+#             */
+/*   Updated: 2022/11/17 13:02:26 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef ERROR_H
+# define ERROR_H
 
-void	swap_a(t_list *stack_a)
-{
-	
-}
+# include <stdlib.h>
+# include <unistd.h>
+
+void	exit_program(void);
+
+#endif

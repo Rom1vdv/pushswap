@@ -6,23 +6,23 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:45:57 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/02/15 18:51:10 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/21 14:31:07 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **head, t_list *new)
 {
 	t_list	*last_link;
 
-	if (lst && new)
+	if (head && new)
 	{
-		if (*lst == NULL)
-			*lst = new;
+		if (*head == NULL)
+			*head = new;
 		else
 		{
-			last_link = ft_lstlast(*lst);
+			last_link = ft_lstlast(*head);
 			last_link->next = new;
 		}
 	}
