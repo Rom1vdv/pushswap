@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/17 15:06:53 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/22 17:59:01 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ t_list	*parse_args_to_list(char **av)
 			if (check_duplicates(value_to_parse, parsing_list) == 0)
 			{
 				new_node = ft_lstnew(value_to_parse);
+
 				ft_lstadd_back(&parsing_list, new_node);
 				i++;
 			}

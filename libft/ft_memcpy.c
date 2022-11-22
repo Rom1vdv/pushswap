@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:05:58 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/02/23 21:06:59 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/22 17:11:27 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 		len--;
 	}
 	return (dst);
-}
-
-int main(void)
-{
-	
 }

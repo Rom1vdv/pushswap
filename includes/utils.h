@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 17:05:07 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/22 17:35:39 by romvan-d         ###   ########.fr       */
+/*   Created: 2022/11/22 17:08:17 by romvan-d          #+#    #+#             */
+/*   Updated: 2022/11/22 17:08:34 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#ifndef UTILS_H
+# define UTILS_H
 
-void	debug_stack(t_list *stack)
-{
-	int i;
+void	debug_stack(t_list *stack);
 
-	i = 0;
-	while(stack)
-	{
-		printf("%dth node de la liste : %d\n", i, stack->content);
-		i++;
-		stack = stack->next;
-	}	
-}
+#endif
