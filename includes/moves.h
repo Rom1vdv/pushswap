@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:19:28 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/23 19:05:13 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/24 20:25:24 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,13 @@ void	push_b(t_stacks *stacks);
 /* Rotate moves */
 
 void	rotate_a(t_list **stack_a);
+void	rotate_b(t_list **stack_b);
+void	rotate_a_and_b(t_stacks *stacks);
 
+/* Reverse Rotate Moves */
+
+void	reverse_rotate_a(t_list **stack_a);
+void	reverse_rotate_b(t_list **stack_b);
+void	reverse_rotate_a_and_b(t_stacks *stacks);
 
 #endif

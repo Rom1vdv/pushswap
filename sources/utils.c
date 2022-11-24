@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:05:07 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/23 17:51:25 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/24 17:30:24 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	debug_stack(t_list *stack)
 		printf("%dth node de la liste : %d\n", i, stack->content);
 		i++;
 		stack = stack->next;
-	}	
+	}
 }
