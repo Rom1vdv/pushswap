@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/28 11:55:06 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:09:44 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	check_duplicates(int check_value, t_list *parsing_list)
 {
 	if (!parsing_list)	//? devrait fonctionner pour la premiere entree de la liste
 		return (0);
-	while(parsing_list->next)	//! a tester si il prend le dernier element
+	while(parsing_list)	//! a tester si il prend le dernier element: Edit parsing_list-> next en juste parsing_list sinon il prend pas le premier element pour comparer le duplicate
 	{
 		if (check_value == parsing_list->content)
 			exit_program();
@@ -50,10 +50,12 @@ t_list	*parse_args_to_list(char **av)
 	parsing_list = NULL;
 	while(av[i])
 	{
+		if (!av[i])
+			exit_program();
 		if (check_arg_validity(av[i]) == 0)
 		{
 			value_to_parse = ft_atoi(av[i]);	//! exit si overflow a changer + verifier les doublons avec trailing zeros
-			if (check_duplicates(value_to_parse, parsing_list) == 0)
+			if (check_duplicates(value_to_parse, parsing_list) == 0) //! ne marche pas si duplicate en 1er argument
 			{
 				new_node = ft_lstnew(value_to_parse);
 				ft_lstadd_back(&parsing_list, new_node);
