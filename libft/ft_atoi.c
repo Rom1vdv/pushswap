@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:18:19 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/28 19:13:02 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:33:06 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,6 @@ static int	ft_sign(const char *str, int i, int *sign)
 	return (i);
 }
 
-// static int	ft_check_overflow(long int number, int sign)
-// {
-// 	if (sign == 1 && number < 0)
-// 		return (0);
-// 	if (sign == 0 && number < 0)
-// 		return (-1);
-// 	return (1);
-// }
 
 int	ft_atoi(const char *str)
 {
@@ -51,6 +43,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 0;
 	number = 0;
+	if (!str[0])
+		exit_program();
 	i = ft_iswhitespace(str, i);
 	i = ft_sign(str, i, &sign);
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))

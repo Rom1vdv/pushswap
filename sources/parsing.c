@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/28 19:09:44 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:29:40 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	check_duplicates(int check_value, t_list *parsing_list)
 {
 	if (!parsing_list)	//? devrait fonctionner pour la premiere entree de la liste
 		return (0);
-	while(parsing_list)	//! a tester si il prend le dernier element: Edit parsing_list-> next en juste parsing_list sinon il prend pas le premier element pour comparer le duplicate
+	while (parsing_list)	//! a tester si il prend le dernier element: Edit parsing_list-> next en juste parsing_list sinon il prend pas le premier element pour comparer le duplicate
 	{
 		if (check_value == parsing_list->content)
 			exit_program();
@@ -32,8 +32,11 @@ static int	check_arg_validity(char *arg)
 	i = 0;
 	while(arg[i])
 	{
-		if(!ft_isdigit(arg[i]))
+		if(!ft_isdigit(arg[i]) && arg[0] != '-') //! fix le - pas en trailing (4-3)
+		{
+			printf("on quitte ici ou bien\n");
 			exit_program();
+		}
 		i++;
 	}
 	return (0);
@@ -55,7 +58,7 @@ t_list	*parse_args_to_list(char **av)
 		if (check_arg_validity(av[i]) == 0)
 		{
 			value_to_parse = ft_atoi(av[i]);	//! exit si overflow a changer + verifier les doublons avec trailing zeros
-			if (check_duplicates(value_to_parse, parsing_list) == 0) //! ne marche pas si duplicate en 1er argument
+			if (check_duplicates(value_to_parse, parsing_list) == 0)
 			{
 				new_node = ft_lstnew(value_to_parse);
 				ft_lstadd_back(&parsing_list, new_node);
