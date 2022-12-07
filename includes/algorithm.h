@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   algorithm.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 13:40:24 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/21 15:47:18 by romvan-d         ###   ########.fr       */
+/*   Created: 2022/12/07 14:53:40 by romvan-d          #+#    #+#             */
+/*   Updated: 2022/12/07 14:54:29 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef ALGORITHM_H
+# define ALGORITHM_H
 
-t_list	*ft_lstnew(int content)
-{
-	t_list	*lst_new;
+# include "push_swap.h"
 
-	lst_new = malloc(sizeof(*lst_new));
-	if (!lst_new)
-		return (NULL);
-	lst_new->content = content;
-	lst_new->next = NULL;
-	return (lst_new);
-}
+int	stack_min_value(t_list *stack, int value);
+
+#endif

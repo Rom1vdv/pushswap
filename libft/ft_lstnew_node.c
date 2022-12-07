@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 11:55:36 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/12/07 15:33:17 by romvan-d         ###   ########.fr       */
+/*   Created: 2022/02/15 13:40:24 by romvan-d          #+#    #+#             */
+/*   Updated: 2022/12/06 17:23:23 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	stack_min_value(t_list *stack, int value)
+t_list	*ft_lstnew_node(int content)
 {
-	while(stack)
-	{
-		if (stack->content < value)
-		{
-			printf("wrong value\n");
-			return (0);
-		}
-		stack = stack->next;
-	}
-	printf("hello its right\n");
-	return (1);
-}
+	t_list	*lst_new;
 
-int	check_which_half(t_list stack, int middle, int value)
-{
-	
+	lst_new = malloc(sizeof(*lst_new));
+	if (!lst_new)
+		return (NULL);
+	lst_new->content = content;
+	lst_new->next = NULL;
+	return (lst_new);
 }

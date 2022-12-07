@@ -6,11 +6,11 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/29 16:29:40 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/12/06 17:26:03 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 static int	check_duplicates(int check_value, t_list *parsing_list)
 {
@@ -60,7 +60,7 @@ t_list	*parse_args_to_list(char **av)
 			value_to_parse = ft_atoi(av[i]);	//! exit si overflow a changer + verifier les doublons avec trailing zeros
 			if (check_duplicates(value_to_parse, parsing_list) == 0)
 			{
-				new_node = ft_lstnew(value_to_parse);
+				new_node = ft_lstnew_node(value_to_parse);
 				ft_lstadd_back(&parsing_list, new_node);
 				i++;
 			}

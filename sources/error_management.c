@@ -6,11 +6,11 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:38:39 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/17 15:07:03 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/12/07 14:41:09 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	exit_program(void)
 {

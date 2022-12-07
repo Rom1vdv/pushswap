@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:51:42 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/22 17:30:16 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/12/06 17:23:31 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef struct s_list
 }	t_list;
 
 void	ft_lstadd_front(t_list **lst, t_list *new);
-t_list	*ft_lstnew(int content);
+t_list	*ft_lstnew_node(int content);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
