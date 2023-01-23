@@ -6,7 +6,7 @@
 #    By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 17:14:12 by romvan-d          #+#    #+#              #
-#    Updated: 2022/12/06 17:22:22 by romvan-d         ###   ########.fr        #
+#    Updated: 2023/01/23 15:29:46 by romvan-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I ./includes -I ./libft
 
-# SANITIZE = -g -fsanitize=address 
+#SANITIZE =  -fsanitize=address -g
 
 
 $(NAME): libft/$(LIBFT) $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:51:42 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/12/06 17:23:31 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:53:17 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 typedef struct s_list
 {
 	int				content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 

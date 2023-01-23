@@ -6,12 +6,12 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:18:19 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/29 16:33:06 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:26:22 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
+#include "stdio.h"
 //!a verifier les valeurs negatives et loverflow//
 
 static int	ft_iswhitespace(const char *str, int i)
@@ -38,7 +38,8 @@ int	ft_atoi(const char *str)
 {
 	int			i;
 	int			sign;
-	long int	number;
+	int	number;
+	int	saved;
 
 	i = 0;
 	sign = 0;
@@ -49,21 +50,13 @@ int	ft_atoi(const char *str)
 	i = ft_sign(str, i, &sign);
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
-		number *= 10;
-		number += str[i] - 48;
+		saved = number;
+		number = 10 * number + str[i] - 48;
 		i++;
-		if (number > 2147483647)
+		if (number - sign < saved)
 			exit_program();
 	}
 	if (sign == 1)
 		number *= -1;
 	return ((int) number);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char *str = "2147483648";
-// 	printf("%d\n", ft_atoi(str));
-// }

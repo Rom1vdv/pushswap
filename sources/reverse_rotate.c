@@ -6,45 +6,48 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 19:05:39 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/12/07 14:40:06 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:19:10 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_a(t_list **stack_a)
+
+/* proteger rotate */
+
+/**
+ * It takes the last element of the list and puts it at the beginning of the list
+ * 
+ * @param stack A pointer to the first element of the stack.
+ * 
+ * @return The address of the first element of the list.
+ */
+void	reverse_rotate(t_list **stack, char *str)
 {
 	t_list	*tmp;
 	
-	tmp = *stack_a;
+	tmp = *stack;
+	if (*stack == NULL || ft_lstsize(*stack) == 1)
+		return;
 	while(tmp->next->next)
 	{
 		tmp = tmp->next;
 	}
-	tmp->next->next = (*stack_a);
-    (*stack_a) = tmp->next;
+	tmp->next->next = (*stack);
+    (*stack) = tmp->next;
     tmp->next = NULL;
-	write(1, "rra\n", 4);
+	write(1, str, ft_strlen(str));
 }
 
-void	reverse_rotate_b(t_list **stack_b)
+void	exec_reverse_rotate(t_stacks *stacks, int which_stack)
 {
-	t_list	*tmp;
-	
-	tmp = *stack_b;
-	while(tmp->next->next)
+	if (!which_stack)
+		reverse_rotate(&stacks->stack_a, "rra\n");
+	else if (which_stack == 1)
+		reverse_rotate(&stacks->stack_b, "rrb\n");
+	else
 	{
-		tmp = tmp->next;
+		reverse_rotate(&stacks->stack_a, "rrr\n");
+		reverse_rotate(&stacks->stack_b, 0);
 	}
-	tmp->next->next = (*stack_b);
-    (*stack_b) = tmp->next;
-    tmp->next = NULL;
-	write(1, "rrb\n", 4);
-}
-
-void	reverse_rotate_a_and_b(t_stacks *stacks)
-{
-	reverse_rotate_a(&stacks->stack_a);
-	reverse_rotate_b(&stacks->stack_b);
-	write(1, "rrr\n", 4);
 }
