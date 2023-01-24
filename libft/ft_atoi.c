@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 15:18:19 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 14:26:22 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:24:03 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@ static int	ft_sign(const char *str, int i, int *sign)
 	return (i);
 }
 
-
 int	ft_atoi(const char *str)
 {
 	int			i;
 	int			sign;
-	int	number;
-	int	saved;
+	int			number;
+	int			saved;
 
 	i = 0;
 	sign = 0;

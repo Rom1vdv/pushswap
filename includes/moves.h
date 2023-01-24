@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:19:28 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 16:20:50 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:23:05 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 typedef struct s_stacks
 {
-	t_list *stack_a;
-	int	size_a;
-	t_list *stack_b;
-	int size_b;
+	t_list	*stack_a;
+	int		size_a;
+	t_list	*stack_b;
+	int		size_b;
 }	t_stacks;
 
 /* Swap moves */

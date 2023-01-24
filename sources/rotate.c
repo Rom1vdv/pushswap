@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 17:58:35 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 15:18:47 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:31:47 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	rotate(t_list **stack, char *str)
 {
 	t_list	*tmp;
-	
+
 	tmp = *stack;
 	if (*stack == NULL)
-		return;
-	while(tmp->next)
+		return ;
+	while (tmp->next)
 	{
 		tmp = tmp->next;
 	}

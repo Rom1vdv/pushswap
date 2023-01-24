@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:39:27 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 14:55:36 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:23:10 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@
 # include "small_sort.h"
 # include "../libft/libft.h"
 # include <stdio.h>
-
 
 #endif

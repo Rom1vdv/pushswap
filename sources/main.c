@@ -6,15 +6,27 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:31:31 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 17:48:45 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:24:48 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static void	size_controller(t_stacks *stacks)
+{
+	if (stacks->size_a == 2)
+		sort_stack_2(stacks, stacks->stack_a, 0);
+	else if (stacks->size_a == 3)
+		sort_stack_3(stacks, &stacks->stack_a, 0);
+	else if (stacks->size_a <= 10)
+		sort_stack_small(stacks);
+	else
+		radix_sort(stacks);
+}
+
 int	check_if_sorted(t_list *stack)
 {
-	while(stack->next)
+	while (stack->next)
 	{
 		if (stack->content > stack->next->content)
 			return (0);
@@ -23,7 +35,7 @@ int	check_if_sorted(t_list *stack)
 	return (1);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
 
@@ -36,10 +48,8 @@ int main(int ac, char **av)
 	{
 		stacks->stack_a = parse_args_to_list(av);
 		if (check_if_sorted(stacks->stack_a))
-			return (0);
-		debug_stack(stacks->stack_a);
-		sort_stack_5(stacks);
-		debug_stack(stacks->stack_a);
+			exit(1);
+		size_controller(stacks);
 	}
 	exit(0);
 	return (0);

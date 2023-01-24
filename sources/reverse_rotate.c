@@ -6,14 +6,11 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 19:05:39 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 15:19:10 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:31:10 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
-/* proteger rotate */
 
 /**
  * It takes the last element of the list and puts it at the beginning of the list
@@ -25,17 +22,15 @@
 void	reverse_rotate(t_list **stack, char *str)
 {
 	t_list	*tmp;
-	
+
 	tmp = *stack;
 	if (*stack == NULL || ft_lstsize(*stack) == 1)
-		return;
-	while(tmp->next->next)
-	{
+		return ;
+	while (tmp->next->next)
 		tmp = tmp->next;
-	}
 	tmp->next->next = (*stack);
-    (*stack) = tmp->next;
-    tmp->next = NULL;
+	(*stack) = tmp->next;
+	tmp->next = NULL;
 	write(1, str, ft_strlen(str));
 }
 

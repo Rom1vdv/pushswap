@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:45:57 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/21 18:01:02 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:23:43 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **head, t_list *new)
 
 	if (head && new)
 	{
-		if (*head == NULL)             
+		if (*head == NULL)
 			*head = new;
 		else
 		{

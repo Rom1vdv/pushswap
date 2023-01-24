@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 14:42:47 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:27:53 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
  */
 static int	check_duplicates(int check_value, t_list *parsing_list)
 {
-	if (!parsing_list)	//? devrait fonctionner pour la premiere entree de la liste
+	if (!parsing_list)
 		return (0);
-	while (parsing_list)	//! a tester si il prend le dernier element: Edit parsing_list-> next en juste parsing_list sinon il prend pas le premier element pour comparer le duplicate
+	while (parsing_list)
 	{
 		if (check_value == parsing_list->content)
 			exit_program();
@@ -43,13 +43,13 @@ static int	check_duplicates(int check_value, t_list *parsing_list)
 static int	check_arg_validity(char *arg)
 {
 	int	i;
-	
+
 	i = 0;
-	if(arg[0] == '-')
+	if (arg[0] == '-')
 		++i;
-	while(arg[i])
+	while (arg[i])
 	{
-		if(!ft_isdigit(arg[i]))
+		if (!ft_isdigit(arg[i]))
 			exit_program();
 		i++;
 	}
@@ -60,14 +60,14 @@ static int	check_arg_validity(char *arg)
 
 void	ft_convert_to_index(t_list *parsing_list)
 {
-	t_list *tmp;
-	t_list *tmp_bis;
-	
+	t_list	*tmp;
+	t_list	*tmp_bis;
+
 	tmp = parsing_list;
-	while(tmp)
+	while (tmp)
 	{
 		tmp_bis = parsing_list;
-		while(tmp_bis)
+		while (tmp_bis)
 		{
 			if (tmp->content > tmp_bis->content)
 				tmp->index++;
@@ -78,23 +78,24 @@ void	ft_convert_to_index(t_list *parsing_list)
 }
 
 /**
- * It takes an array of strings as an argument, checks if the strings are valid integers, converts them
- * to integers, checks if there are duplicates, and returns a linked list of integers
- * 
+ * It takes an array of strings as an argument,
+ *  checks if the strings are valid integers
+ *  converts them to integers, checks if there are duplicates,
+ *  and returns a linked list of integers
  * @param av the array of strings passed to the program
  * 
  * @return A pointer to the first node of the list.
  */
 t_list	*parse_args_to_list(char **av)
 {
-	int 	i;
+	int		i;
 	int		value_to_parse;
 	t_list	*parsing_list;
 	t_list	*new_node;	
-	
+
 	i = 1;
 	parsing_list = NULL;
-	while(av[i])
+	while (av[i])
 	{
 		if (!av[i])
 			exit_program();

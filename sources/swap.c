@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:17:41 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/23 15:25:46 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:33:43 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	swap(t_list **stack, char *str)
 {
 	t_list	*tmp;
-	
+
 	tmp = (*stack)->next;
 	(*stack)->next = tmp->next;
 	tmp->next = *stack;
