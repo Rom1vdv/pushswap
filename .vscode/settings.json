@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"push_swap.h": "c",
-		"sstream": "c"
+		"sstream": "c",
+		"libft.h": "c"
 	}
 }

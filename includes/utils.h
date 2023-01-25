@@ -6,13 +6,14 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:08:17 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/11/22 17:08:34 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:45:19 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
+# include <stdlib.h>
 
-void	debug_stack(t_list *stack);
+void	*my_malloc(size_t size);
 
 #endif

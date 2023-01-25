@@ -6,21 +6,20 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 17:05:07 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/24 20:33:59 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 11:37:51 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	debug_stack(t_list *stack)
+void	*my_malloc(size_t size)
 {
-	int	i;
+	void	*tmp;
 
-	i = 0;
-	while (stack)
+	tmp = malloc(size);
+	if (tmp == NULL)
 	{
-		printf("%dth node de la liste : %d\n", i, stack->index);
-		i++;
-		stack = stack->next;
+		exit(1);
 	}
+	return (tmp);
 }

@@ -6,21 +6,12 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:59:50 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/24 20:29:40 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:43:24 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/**
- * It takes the first element of the first stack 
- * and puts it at the beginning of the second stack
- * 
- * @param stack_srs the stack from which we want to take the first element
- * @param stack_dst The stack to push to
- * 
- * @return the address of the first element of the list.
- */
 void	push(t_list **stack_srs, t_list **stack_dst, char *str)
 {
 	t_list	*tmp;

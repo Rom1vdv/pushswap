@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:31:31 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/24 20:24:48 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:34:01 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
 
-	stacks = malloc(sizeof(*stacks));
+	stacks = my_malloc(sizeof(*stacks));
 	stacks->stack_a = NULL;
 	stacks->stack_b = NULL;
 	stacks->size_a = ac - 1;
@@ -51,6 +51,6 @@ int	main(int ac, char **av)
 			exit(1);
 		size_controller(stacks);
 	}
-	exit(0);
+	free_stacks(stacks);
 	return (0);
 }

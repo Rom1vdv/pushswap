@@ -6,19 +6,12 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 19:05:39 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/24 20:31:10 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:43:29 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/**
- * It takes the last element of the list and puts it at the beginning of the list
- * 
- * @param stack A pointer to the first element of the stack.
- * 
- * @return The address of the first element of the list.
- */
 void	reverse_rotate(t_list **stack, char *str)
 {
 	t_list	*tmp;

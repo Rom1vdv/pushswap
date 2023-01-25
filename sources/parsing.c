@@ -6,20 +6,12 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:29:53 by romvan-d          #+#    #+#             */
-/*   Updated: 2023/01/24 20:27:53 by romvan-d         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:43:19 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/**
- * It checks if the value passed as an argument is already in the list
- * 
- * @param check_value the value to check for duplicates
- * @param parsing_list the list that contains the parsed values
- * 
- * @return the value of the check_value.
- */
 static int	check_duplicates(int check_value, t_list *parsing_list)
 {
 	if (!parsing_list)
@@ -33,13 +25,6 @@ static int	check_duplicates(int check_value, t_list *parsing_list)
 	return (0);
 }
 
-/**
- * It checks if the argument is a valid number
- * 
- * @param arg The argument to be checked.
- * 
- * @return the value of the last expression evaluated.
- */
 static int	check_arg_validity(char *arg)
 {
 	int	i;
@@ -77,15 +62,6 @@ void	ft_convert_to_index(t_list *parsing_list)
 	}
 }
 
-/**
- * It takes an array of strings as an argument,
- *  checks if the strings are valid integers
- *  converts them to integers, checks if there are duplicates,
- *  and returns a linked list of integers
- * @param av the array of strings passed to the program
- * 
- * @return A pointer to the first node of the list.
- */
 t_list	*parse_args_to_list(char **av)
 {
 	int		i;
@@ -97,8 +73,6 @@ t_list	*parse_args_to_list(char **av)
 	parsing_list = NULL;
 	while (av[i])
 	{
-		if (!av[i])
-			exit_program();
 		if (check_arg_validity(av[i]) == 0)
 		{
 			value_to_parse = ft_atoi(av[i]);
